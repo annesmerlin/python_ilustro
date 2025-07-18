@@ -1,0 +1,10 @@
+from itertools import permutations
+
+def unique_permutations(s):
+    perms = set(permutations(s))  # Automatically removes duplicates
+    return [''.join(p) for p in sorted(perms)]
+
+# Example usage
+s = "aab"
+result = unique_permutations(s)
+print(result)
